@@ -9,7 +9,7 @@ export default function StabilityContent() {
       <div className="prose prose-neutral dark:prose-invert max-w-none mb-16">
         <h1>Stability &amp; Reliability Model</h1>
         <p className="text-lg text-muted-foreground leading-relaxed">
-          Forged Codes and the Registry are engineered for maximum availability and resilience. We measure our success not just in features shipped, but in uninterrupted service during your most critical moments.
+          Forged Codes and Grip are engineered for maximum availability and resilience. We measure our success not just in features shipped, but in uninterrupted service during your most critical moments.
         </p>
       </div>
 

@@ -73,7 +73,7 @@ export default function SecurityContent() {
             }
             status="implemented"
           >
-            Our zero-knowledge protocol ensures that Forged Codes and the Registry cannot access user data even if compelled. Encryption keys are derived from user credentials using Argon2id with 128MB memory cost.
+            Our zero-knowledge protocol ensures that Forged Codes cannot access user data even if compelled. Encryption keys are derived from user credentials using Argon2id with 128MB memory cost.
           </SecurityFeature>
 
           <SecurityFeature
@@ -282,7 +282,7 @@ export default function SecurityContent() {
 
         <h2 className="text-3xl font-bold tracking-tight text-foreground">Our Commitment</h2>
         <p className="text-muted-foreground">
-          We maintain a <strong className="text-foreground">Security First</strong> posture across Forged Codes and the Registry. Security isn&apos;t a feature—it&apos;s the foundation upon which everything else is built. We invest 20% of engineering capacity in security improvements, debt reduction, and resilience engineering.
+          We maintain a <strong className="text-foreground">Security First</strong> posture across Forged Codes and Grip. Security isn&apos;t a feature—it&apos;s the foundation upon which everything else is built. We invest 20% of engineering capacity in security improvements, debt reduction, and resilience engineering.
         </p>
 
         <blockquote className="border-l-4 border-primary/50 pl-4 italic my-6 mx-0 bg-muted/50 py-2 pr-4 rounded-r-md text-muted-foreground">

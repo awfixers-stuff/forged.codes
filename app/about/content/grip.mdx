@@ -1,154 +1,101 @@
 ---
-title: Forged Codes Registry
+title: Grip
 ---
 
-# Forged Codes Registry
+# Grip
 
-The Forged Codes Registry is our comprehensive package registry and repository management platform, designed for modern software development teams that demand both power and simplicity.
+Grip is the version control system that powers Forged Codes. It combines the distributed nature of Git, the branching model of Mercurial, and the stack-based workflow of Graphite (gt) — with every feature GitHub and GitLab advertise, but no graphical interface.
 
-## Overview
+That last part is by design.
 
-The Registry combines the robustness of traditional package registries with modern collaborative features and AI-powered insights. Whether you're working on a solo project or coordinating across a global team, the Registry provides the tools you need to succeed.
+## The Core Idea
 
-## Package Registry
+GitHub and GitLab built web frontends on top of existing version control. Grip inverts that: we provide the backend infrastructure, and **you** build the frontend your users interact with. You bring the brand, the design, the experience. We handle hosting, version control operations, CI/CD, registries, and security.
 
-### Secure Package Hosting
+Think of it like AWS, but for code infrastructure.
 
-Our intelligent package hosting system provides:
+## What Grip Includes
 
-- **Access Controls**: Fine-grained permissions at the organization, team, and package level
-- **Verified Packages**: Cryptographic signatures for every published version
-- **Audit Trails**: Complete history of all package operations
+### Version Control Engine
 
-### Intelligent Dependency Management
+A VCS that merges the strengths of three systems:
 
-The Registry's AI-powered dependency system understands your project structure:
+- **Git** — Distributed, fast, and ubiquitous. Grip uses Git-compatible protocols so existing tooling works out of the box.
+- **Mercurial** — Safer branching and merging semantics. Named branches that persist, better merge handling, and a cleaner mental model for large monorepos.
+- **Graphite (gt)** — Stack-based pull requests. Create dependent PR chains, iterate on them independently, and merge in sequence. No more blocked pipelines.
 
-```typescript
-// Before dependency conflict
-{
-  "dependencies": {
-    "framework": "^2.0.0",
-    "plugin": "^1.0.0" // conflicts with framework ^2.0.0
-  }
-}
+### Repository Hosting
 
-// After AI-powered resolution
-{
-  "dependencies": {
-    "framework": "^2.0.0",
-    "plugin": "^2.1.0" // compatible version resolved automatically
-  }
-}
+Hosted repositories with unlimited private repos, fine-grained access controls, and API-driven management. No GUI required — manage everything through the Grip CLI or API.
+
+### CI/CD Pipelines
+
+Automated build, test, and deployment pipelines triggered by pushes and merges. Define pipelines in configuration files, run them on our infrastructure, and get results through the API or your own frontend.
+
+### Package Registry
+
+The Forged Codes Registry — a secure, scalable package registry with organization-level access controls, audit trails, and webhook integrations. npm, PyPI, Maven, and more, all unified under one API.
+
+### Security
+
+- End-to-end encryption for all repository data
+- Dependency vulnerability scanning
+- Signature verification for commits and tags
+- Fine-grained access controls at the org, team, repo, and branch level
+- Complete audit trails for compliance
+
+## Grip Is Not a GitHub Clone
+
+Grip has no web UI. No pull request pages, no file browsers, no issue trackers built into a web app. Those are your responsibility — and your opportunity.
+
+When you build on Grip, you control:
+
+- **How users interact with their code** — Your frontend, your UX, your design language
+- **What features you surface** — Stack-based workflows, code review, issue tracking — pick and choose
+- **Pricing and packaging** — Charge what you want, bundle what you want
+- **Data ownership** — Your customers' data lives on your infrastructure, accessed through your policies
+
+## The API
+
+Everything in Grip is API-first. If you can do it in a GUI, you can do it through the API — because the API came first.
+
+```bash
+# Create a repository
+grip repo create my-org/my-project --private
+
+# Push a stack of dependent changes
+grip stack submit --base main --head feature-1 feature-2 feature-3
+
+# Check pipeline status
+grip pipeline status --watch
+
+# Publish a package
+grip publish --registry npm ./dist
 ```
 
-### Security Features
+## Infrastructure Model
 
-- **End-to-End Encryption**: All repository data is encrypted in transit and at rest
-- **Vulnerability Scanning**: Automated security audits on every push
-- **Dependency Audits**: Real-time alerts for known vulnerabilities in dependencies
-- **Code Secret Detection**: Prevent accidental secret exposure
+Grip runs on Forged Codes infrastructure. You don't manage servers, databases, or CDN configuration. Your users get fast, reliable access to their code regardless of scale.
 
-## Development Platform
-
-### Visual Package Explorer
-
-Navigate complex package structures with our intuitive visual interface:
-
-- **Dependency Graph**: See how packages relate to each other
-- **Download Analytics**: Track package adoption and usage trends
-- **Security Dashboard**: Monitor vulnerabilities across all dependencies
-
-### Real-Time Collaboration
-
-- **Live Code Reviews**: Multiple reviewers can comment and suggest changes simultaneously
-- **Integrated Chat**: Context-aware discussions tied to specific code sections
-- **Pair Programming**: Built-in voice, video, and shared cursors
-
-### AI-Powered Insights
-
-```typescript
-// Registry AI suggests improvements
-interface PackageConfig {
-  name: string;
-  version: string;
-  dependencies: Record<string, string>;
-  scripts: Record<string, string>;
-}
-
-// The Registry analyzes your package and suggests:
-// - Optimization opportunities
-// - Security patches
-// - Dependency updates
-// - Size reduction strategies
-```
-
-## Integration Ecosystem
-
-The Registry integrates seamlessly with your existing tools:
-
-- **CI/CD Platforms**: GitHub Actions, GitLab CI, Jenkins
-- **IDE Support**: VS Code, IntelliJ, WebStorm
-- **Cloud Providers**: AWS, GCP, Azure
-- **Monitoring**: Datadog, New Relic, Grafana
-
-## Registry API
-
-The Registry provides a comprehensive REST and GraphQL API:
-
-```typescript
-// Initialize Registry client
-import { Registry } from '@forgedcodes/sdk';
-
-const registry = new Registry.Client({
-  apiKey: process.env.FORGED_CODES_API_KEY,
-  organization: 'my-org'
-});
-
-// Publish a package
-const pkg = await registry.packages.publish({
-  name: '@my-org/my-package',
-  version: '1.0.0',
-  tarball: './dist/package.tgz',
-  visibility: 'private',
-  metadata: {
-    description: 'My awesome package',
-    keywords: ['utility', 'forged-codes']
-  }
-});
-
-// Monitor package activity
-const activity = await registry.packages.getActivity({
-  package: '@my-org/my-package',
-  period: '30d'
-});
-```
-
-## Pricing
-
-- **Free**: Up to 5 private packages, 1GB storage
-- **Team**: Unlimited private packages, 50GB storage, team analytics
-- **Enterprise**: Custom deployment, unlimited storage, SSO, SLA
+- **Multi-region deployment** — Repositories are available globally with low-latency clones
+- **99.99% uptime SLA** — We keep the lights on
+- **Horizontal scaling** — From solo developers to enterprises
+- **Compliance** — SOC 2, ISO 27001, GDPR — we handle the audits so you don't have to
 
 ## Getting Started
 
 ```bash
-# Install the Registry CLI
-npm install -g @forgedcodes/cli
+# Install the Grip CLI
+curl -fsSL https://get.grip.forged.codes | sh
 
-# Authenticate with the Registry
-forged login
+# Authenticate
+grip auth login
 
-# Publish your first package
-forged publish
-
-# Install a package from the Registry
-forged install @forged-codes/example
-
-# Start collaborating
-forged collaborate --live
+# Create your first project
+grip init my-project
+grip push
 ```
 
 ---
 
-*Forged Codes Registry — Ship with Confidence.*
+*Forged Codes — Your Code. Your Brand. Our Infrastructure.*

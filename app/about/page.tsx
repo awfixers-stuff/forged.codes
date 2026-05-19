@@ -1,7 +1,12 @@
 import { notFound } from "next/navigation";
-import { compileMDX } from "./[...page]/page";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { mdxComponents } from "@/components/mdx-components";
 import fs from "fs";
 import path from "path";
+import matter from "gray-matter";
+import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 async function getMdxData(slug: string) {
   const contentDir = path.join(process.cwd(), "app/about/content");
@@ -12,17 +17,16 @@ async function getMdxData(slug: string) {
   }
 
   const fileContent = fs.readFileSync(filePath, "utf-8");
-  return { content: fileContent };
+  const { data: metadata, content } = matter(fileContent);
+  return { metadata, content };
 }
 
-export default async function AboutPage() {
+export default async function AboutIndexPage() {
   const mdxData = await getMdxData("about");
 
   if (!mdxData) {
     notFound();
   }
-
-  const MDXContent = compileMDX(mdxData.content);
 
   return (
     <main className="min-h-screen bg-background">
@@ -34,7 +38,16 @@ export default async function AboutPage() {
         </header>
 
         <div className="prose prose-neutral dark:prose-invert prose-headings:scroll-mt-20 prose-headings:font-bold lg:prose-lg max-w-none">
-          <MDXContent />
+          <MDXRemote
+            source={mdxData.content}
+            components={mdxComponents}
+            options={{
+              mdxOptions: {
+                remarkPlugins: [remarkGfm],
+                rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+              },
+            }}
+          />
         </div>
 
         <footer className="mt-16 pt-8 border-t border-border">

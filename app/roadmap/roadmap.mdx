@@ -4,19 +4,19 @@ title: Product Roadmap
 
 # Product Roadmap
 
-Our vision for the future of development collaboration. Here's what we're building, quarter by quarter.
+Our plan for building the backend infrastructure that powers the next generation of version control experiences. Here's what we're building, quarter by quarter.
 
 <Phase title="Foundation & Core" quarter="Q1 2026">
-  <Milestone title="Registry Platform Launch" status="completed">
-    Released the core registry platform with secure package hosting, access controls, and CI/CD integration.
+  <Milestone title="Grip Core Engine" status="completed">
+    Released the core Grip VCS engine — Git-compatible protocol, Mercurial-style branching, and Graphite stack workflows all running on our infrastructure.
   </Milestone>
 
-  <Milestone title="Basic GUI Interface" status="completed">
-    Visual package explorer with dependency graphs and contribution analytics.
+  <Milestone title="Forged Codes Registry" status="completed">
+    Secure package registry with enterprise-grade access controls, CI/CD integration, and multi-format support (npm, PyPI, Maven, Docker).
   </Milestone>
 
-  <Milestone title="Real-Time Collaboration Beta" status="in-progress">
-    Live code reviews and integrated chat for teams working simultaneously.
+  <Milestone title="API Layer & CLI" status="in-progress">
+    Public API and Grip CLI for full infrastructure access. Every feature available programmatically — no GUI required.
   </Milestone>
 
   <FeatureList>
@@ -25,117 +25,117 @@ Our vision for the future of development collaboration. Here's what we're buildi
       description="All repository data encrypted in transit and at rest"
     />
     <FeatureItem
-      title="Fine-Grained Access Control"
-      description="Branch-level and file-level permissions"
+      title="Git-Compatible Protocols"
+      description="Push, pull, and clone using existing Git tooling"
     />
     <FeatureItem
       title="Audit Trails"
-      description="Complete history tracking of all changes"
+      description="Complete history tracking of all operations"
     />
   </FeatureList>
 </Phase>
 
 <Phase title="Developer Experience" quarter="Q2 2026">
-  <Milestone title="Advanced Code Review Tools">
-    Inline comments, suggestion blocks, and automated code quality checks.
+  <Milestone title="CI/CD Pipelines">
+    Automated build, test, and deployment pipelines triggered by pushes and merges. Define in config, run on our infrastructure.
   </Milestone>
 
-  <Milestone title="IDE Deep Integration">
-    Native plugins for VS Code, IntelliJ, and WebStorm with full feature parity.
+  <Milestone title="Webhooks & Integrations">
+    Event-driven integrations with Slack, Discord, email, and custom endpoints. Real-time notifications for every push, merge, and pipeline event.
   </Milestone>
 
-  <Milestone title="Performance Dashboard">
-    Insights into team velocity, code review times, and deployment frequency.
-  </Milestone>
-
-  <FeatureList>
-    <FeatureItem
-      title="AI-Powered Code Suggestions"
-      description="Context-aware recommendations during code reviews"
-    />
-    <FeatureItem
-      title="Custom Workflows"
-      description="Automate repetitive tasks with visual workflow builder"
-    />
-    <FeatureItem
-      title="Advanced Branching Strategies"
-      description="GitFlow, trunk-based, and custom workflow support"
-    />
-  </FeatureList>
-</Phase>
-
-<Phase title="Team Collaboration" quarter="Q3 2026">
-  <Milestone title="Video Integration">
-    Start video calls directly from pull requests and code reviews.
-  </Milestone>
-
-  <Milestone title="Project Management Sync">
-    Two-way integration with Jira, Linear, and Trello.
-  </Milestone>
-
-  <Milestone title="Knowledge Base">
-    Automatically generated documentation from code comments and commit messages.
+  <Milestone title="Advanced Access Controls">
+    Fine-grained permissions at the organization, team, repository, and branch level. Role-based access with custom role definitions.
   </Milestone>
 
   <FeatureList>
     <FeatureItem
-      title="Meeting Scheduler"
-      description="Find optimal times for team discussions based on availability"
+      title="Stack-Based Workflows"
+      description="Graphite-style dependent PR chains with independent iteration"
     />
     <FeatureItem
-      title="Task Automation"
-      description="Auto-assign reviewers based on file ownership and expertise"
+      title="Branch Protection Rules"
+      description="Required reviews, status checks, and merge restrictions"
     />
     <FeatureItem
-      title="Team Analytics"
-      description="Identify bottlenecks and optimize team performance"
+      title="Dependency Scanning"
+      description="Automatic vulnerability detection in published packages"
     />
   </FeatureList>
 </Phase>
 
-<Phase title="Enterprise Scale" quarter="Q4 2026">
-  <Milestone title="Single Sign-On (SSO)">
-    SAML 2.0, OAuth 2.0, and enterprise identity provider support.
+<Phase title="Scale & Compliance" quarter="Q3 2026">
+  <Milestone title="Multi-Region Deployment">
+    Deploy repositories across US-East, EU-West, and APAC regions. Data residency controls for compliance-sensitive workloads.
+  </Milestone>
+
+  <Milestone title="Compliance Framework">
+    SOC 2 Type II and ISO 27001 certification. Automated compliance reporting and evidence collection.
+  </Milestone>
+
+  <Milestone title="Enterprise SSO">
+    SAML 2.0 and OIDC integration with enterprise identity providers. SCIM provisioning for automatic user management.
+  </Milestone>
+
+  <FeatureList>
+    <FeatureItem
+      title="Artifact Registry"
+      description="Docker images, binaries, and build artifacts alongside packages"
+    />
+    <FeatureItem
+      title="Monorepo Support"
+      description="Sparse checkouts, path-based permissions, and incremental builds"
+    />
+    <FeatureItem
+      title="Rate Limiting & Quotas"
+      description="API rate limits, storage quotas, and usage analytics per org"
+    />
+  </FeatureList>
+</Phase>
+
+<Phase title="Platform Maturity" quarter="Q4 2026">
+  <Milestone title="Partner API Program">
+    Official API for building custom frontends on top of Grip infrastructure. SDKs for TypeScript, Python, Ruby, and Go.
   </Milestone>
 
   <Milestone title="Advanced Security Controls">
-    IP allowlisting, device management, and compliance reporting.
+    IP allowlisting, device management, commit signing policies, and secret scanning.
   </Milestone>
 
   <Milestone title="Dedicated Infrastructure">
-    Private cloud deployments with custom SLAs and support.
+    Private cloud deployments with custom SLAs, dedicated hardware, and priority support.
   </Milestone>
 
   <FeatureList>
     <FeatureItem
       title="Compliance Dashboards"
-      description="SOC 2, ISO 27001, and GDPR compliance tracking"
+      description="SOC 2, ISO 27001, and GDPR compliance tracking for partners"
     />
     <FeatureItem
       title="Custom Policies"
       description="Enforce organization-specific security and workflow rules"
     />
     <FeatureItem
-      title="API Rate Limiting"
-      description="Granular control over API access and usage quotas"
+      title="White-Label Support"
+      description="Custom domains, branding, and reseller infrastructure"
     />
   </FeatureList>
 </Phase>
 
 <TimelineItem date="Q1 2026" title="Platform Foundation">
-  Core registry platform, basic collaboration features, and initial integrations.
+  Core VCS engine, package registry, and initial API access.
 </TimelineItem>
 
 <TimelineItem date="Q2 2026" title="Developer Empowerment">
-  Enhanced code review experience, deeper IDE integration, and workflow automation.
+  CI/CD pipelines, webhooks, and fine-grained access controls.
 </TimelineItem>
 
-<TimelineItem date="Q3 2026" title="Team Scale">
-  Advanced collaboration tools, project management integration, and team insights.
+<TimelineItem date="Q3 2026" title="Scale & Trust">
+  Multi-region deployment, enterprise SSO, and compliance certification.
 </TimelineItem>
 
-<TimelineItem date="Q4 2026" title="Enterprise Ready">
-  Complete security suite, compliance features, and dedicated deployment options.
+<TimelineItem date="Q4 2026" title="Platform Maturity">
+  Partner API, advanced security, and dedicated infrastructure options.
 </TimelineItem>
 
 # Key Metrics
@@ -143,13 +143,12 @@ Our vision for the future of development collaboration. Here's what we're buildi
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-12">
   <MetricCard label="Active Users" value="50K+" change="+120% this quarter" />
   <MetricCard label="Packages Hosted" value="500K+" change="+85% this quarter" />
-  <MetricCard label="Code Reviews" value="2M+" change="+200% this quarter" />
-  <MetricCard label="Teams On Platform" value="5K+" change="+150% this quarter" />
+  <MetricCard label="API Calls/Day" value="2M+" change="+200% this quarter" />
+  <MetricCard label="Partner Integrations" value="5K+" change="+150% this quarter" />
 </div>
 
 # Coming Soon
 
-- **AI Pair Programming**: Real-time collaborative coding with AI assistance
-- **Smart Branching**: Automatic branch strategy recommendations
-- **Dependency Visualization**: Interactive graphs showing code relationships
-- **Release Management**: Automated versioning, changelogs, and deployment pipelines
+- **Partner SDKs**: Official SDKs for building on Grip infrastructure in TypeScript, Python, Ruby, and Go
+- **Advanced Monorepo Support**: Sparse checkouts, path-based permissions, and incremental CI/CD
+- **White-Label Infrastructure**: Custom domains, branding, and reseller programs for Grip partners

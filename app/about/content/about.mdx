@@ -4,58 +4,49 @@ title: About Forged Codes
 
 # About Forged Codes
 
-Forged Codes is a next-generation software development platform built around the Forged Codes Registry — a secure, enterprise-grade package registry — designed to empower teams to build secure, scalable, and maintainable applications with confidence.
+Forged Codes provides backend infrastructure for version control, package registries, CI/CD, and security. We run the services that power code collaboration — you build the frontends and experiences your users see.
 
-## Our Mission
+## What We Build
 
-We believe that software development should be both powerful and accessible. By combining cutting-edge technology with intuitive workflows, we enable developers to focus on what matters most: creating exceptional products.
+Our flagship product, **Grip**, is a version control system that combines Git compatibility, Mercurial's branching model, and Graphite's stack-based pull request workflows. It has every feature that GitHub and GitLab advertise — but no graphical interface.
 
-> "The future of software is built on trust, precision, and collaboration." — Forged Codes Team
+The AWS model, applied to code: we provide the infrastructure, you provide the experience.
 
-## What We Do
+## Why No GUI?
 
-### Forged Codes Registry
+Because building a great frontend for version control shouldn't require also building the backend. GitHub and GitLab are vertically integrated — they control both the UI and the infrastructure. That means you're locked into their design decisions, their feature cadence, and their pricing.
 
-Our flagship package registry provides enterprise-grade security, access controls, and CI/CD integration. Publish, distribute, and consume packages with confidence using a platform designed for modern development workflows.
+With Grip, you own the front door. Your brand, your design, your user experience. We handle the plumbing: hosting, version control operations, pipelines, registries, and security scanning.
 
-### Development Platform
+## The Forged Codes Registry
 
-The Hosted Development Platform offers a powerful graphical interface for repository management. Visualize complex code relationships, track changes with precision, and collaborate in real-time with your team.
+The Registry is our package hosting platform — one of the services that runs on Grip infrastructure. It provides:
 
-### AI Integration
+- **Secure package hosting** — npm, PyPI, Maven, Docker, and more
+- **Fine-grained access controls** — Organization, team, and package-level permissions
+- **Audit trails** — Every publish, install, and access decision is logged
+- **CI/CD integration** — Packages flow through your pipelines automatically
 
-Stay at the forefront of development with our AI-powered tools. From intelligent code suggestions to automated testing and deployment, our AI integration helps you ship faster and with fewer errors.
+## Our Approach
 
-## Core Values
+### Infrastructure First
 
-### Security First
+We believe code infrastructure should be invisible. Developers shouldn't have to think about where their repos are hosted, how their CI pipelines scale, or whether their packages are secure. Grip handles all of that.
 
-Every line of code we write prioritizes security. We implement industry-leading encryption, access controls, and audit trails to protect your intellectual property.
+### API-Driven
 
-### Developer Experience
+Every feature in Grip is accessible through a well-documented API. If a human can do it through a GUI, a program can do it through our API — because the API came first.
 
-We obsess over the details that make development enjoyable. Clean interfaces, intuitive workflows, and comprehensive documentation ensure you can focus on building, not configuring.
+### Open Where It Matters
 
-### Innovation
-
-We continuously push the boundaries of what's possible in software development. Our research and development teams work tirelessly to bring you tomorrow's tools today.
-
-## Our Technology Stack
-
-- **Next.js** 16 - React framework for the modern web
-- **TypeScript** - Type-safe development for confidence and velocity
-- **Tailwind CSS** - Utility-first styling for consistent, rapid UI development
-- **shadcn/ui** - Beautiful, accessible component library
-- **Forged Codes Registry** - Secure package registry and version control system
-
-## Join Us
-
-We're always looking for talented engineers, designers, and product thinkers who share our passion for building the future of software development. Reach out to us at [hello@forged.codes](mailto:hello@forged.codes) to learn more.
+Grip's protocols are Git-compatible. If you can push to GitHub, you can push to Grip. We don't believe in lock-in at the transport layer. The value is in the infrastructure and the operations, not in proprietary formats.
 
 ## Contact
 
-For partnership opportunities, enterprise inquiries, or general questions, reach out to us at [hello@forged.codes](mailto:hello@forged.codes).
+- **General inquiries:** [hello@forged.codes](mailto:hello@forged.codes)
+- **Security:** [security@forged.codes](mailto:security@forged.codes)
+- **Partnerships:** [partners@forged.codes](mailto:partners@forged.codes)
 
 ---
 
-*Forged Codes — Build with Confidence.*
+*Forged Codes — Your Code. Your Brand. Our Infrastructure.*
