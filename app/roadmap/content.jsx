@@ -15,13 +15,13 @@ function RoadmapContent() {
       </div>
 
       <div className="space-y-8 mb-16">
-        <Phase title="Foundation &amp; Core" quarter="Q1 2025">
-          <Milestone title="Grip Platform Launch" status="completed">
-            Released the core version control system with intelligent branching and AI-powered merge conflict resolution.
+        <Phase title="Foundation &amp; Core" quarter="Q1 2026">
+          <Milestone title="Registry Platform Launch" status="completed">
+            Released the core registry platform with secure package hosting, access controls, and CI/CD integration.
           </Milestone>
 
           <Milestone title="Basic GUI Interface" status="completed">
-            Visual repository explorer with dependency graphs and contribution heatmaps.
+            Visual package explorer with dependency graphs and contribution analytics.
           </Milestone>
 
           <Milestone title="Real-Time Collaboration Beta" status="in-progress">
@@ -44,7 +44,7 @@ function RoadmapContent() {
           </FeatureList>
         </Phase>
 
-        <Phase title="Developer Experience" quarter="Q2 2025">
+        <Phase title="Developer Experience" quarter="Q2 2026">
           <Milestone title="Advanced Code Review Tools">
             Inline comments, suggestion blocks, and automated code quality checks.
           </Milestone>
@@ -73,7 +73,7 @@ function RoadmapContent() {
           </FeatureList>
         </Phase>
 
-        <Phase title="Team Collaboration" quarter="Q3 2025">
+        <Phase title="Team Collaboration" quarter="Q3 2026">
           <Milestone title="Video Integration">
             Start video calls directly from pull requests and code reviews.
           </Milestone>
@@ -102,7 +102,7 @@ function RoadmapContent() {
           </FeatureList>
         </Phase>
 
-        <Phase title="Enterprise Scale" quarter="Q4 2025">
+        <Phase title="Enterprise Scale" quarter="Q4 2026">
           <Milestone title="Single Sign-On (SSO)">
             SAML 2.0, OAuth 2.0, and enterprise identity provider support.
           </Milestone>
@@ -135,16 +135,16 @@ function RoadmapContent() {
       <div className="mb-16">
         <h2 className="text-3xl font-bold tracking-tight text-foreground mb-8">Roadmap Timeline</h2>
         <div className="space-y-2">
-          <TimelineItem date="Q1 2025" title="Platform Foundation">
-            Core version control system, basic collaboration features, and initial integrations.
+          <TimelineItem date="Q1 2026" title="Platform Foundation">
+            Core registry platform, basic collaboration features, and initial integrations.
           </TimelineItem>
-          <TimelineItem date="Q2 2025" title="Developer Empowerment">
+          <TimelineItem date="Q2 2026" title="Developer Empowerment">
             Enhanced code review experience, deeper IDE integration, and workflow automation.
           </TimelineItem>
-          <TimelineItem date="Q3 2025" title="Team Scale">
+          <TimelineItem date="Q3 2026" title="Team Scale">
             Advanced collaboration tools, project management integration, and team insights.
           </TimelineItem>
-          <TimelineItem date="Q4 2025" title="Enterprise Ready">
+          <TimelineItem date="Q4 2026" title="Enterprise Ready">
             Complete security suite, compliance features, and dedicated deployment options.
           </TimelineItem>
         </div>
@@ -154,9 +154,9 @@ function RoadmapContent() {
         <h2 className="text-3xl font-bold tracking-tight text-foreground mb-8">Key Metrics</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <MetricCard label="Active Users" value="50K+" change="+120% this quarter" />
-          <MetricCard label="Repositories Hosted" value="500K+" change="+85% this quarter" />
+          <MetricCard label="Packages Hosted" value="500K+" change="+85% this quarter" />
           <MetricCard label="Code Reviews" value="2M+" change="+200% this quarter" />
-          <MetricCard label="Teams Using Grip" value="5K+" change="+150% this quarter" />
+          <MetricCard label="Teams On Platform" value="5K+" change="+150% this quarter" />
         </div>
       </div>
 

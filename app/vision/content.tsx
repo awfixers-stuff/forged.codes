@@ -208,8 +208,8 @@ export default function VisionContent() {
 
         <div className="text-sm text-muted-foreground mt-8 pt-6 border-t border-border">
           <p><strong>Vision Version:</strong> 2.1</p>
-          <p><strong>Last Updated:</strong> October 2024</p>
-          <p><strong>Next Review:</strong> Q1 2025</p>
+          <p><strong>Last Updated:</strong> May 2025</p>
+          <p><strong>Next Review:</strong> Q3 2025</p>
           <p><strong>Questions?:</strong> hello@forged.codes</p>
         </div>
       </div>

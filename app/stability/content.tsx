@@ -9,7 +9,7 @@ export default function StabilityContent() {
       <div className="prose prose-neutral dark:prose-invert max-w-none mb-16">
         <h1>Stability &amp; Reliability Model</h1>
         <p className="text-lg text-muted-foreground leading-relaxed">
-          Forged Codes, Gripped, and Grip are engineered for maximum availability and resilience. We measure our success not just in features shipped, but in uninterrupted service during your most critical moments.
+          Forged Codes and the Registry are engineered for maximum availability and resilience. We measure our success not just in features shipped, but in uninterrupted service during your most critical moments.
         </p>
       </div>
 
@@ -251,7 +251,7 @@ export default function StabilityContent() {
         <div className="text-sm text-muted-foreground mt-8 pt-6 border-t border-border">
           <p><strong>Current Reliability Score:</strong> 99.97% (12-month rolling average)</p>
           <p><strong>Last Major Outage:</strong> March 2024 (14 minutes) &mdash; <a href="https://status.forged.codes/postmortems/2024-03">Post-mortem</a></p>
-          <p><strong>Next Game Day:</strong> February 15, 2025</p>
+          <p><strong>Next Game Day:</strong> August 2025</p>
           <p><strong>Questions?:</strong> reliability@forged.codes</p>
         </div>
       </div>
