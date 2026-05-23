@@ -6,9 +6,9 @@ import { StatCard, ArchitectureLayer, SecurityFeature, ThreatModel, ComplianceBa
 export default function StabilityContent() {
   return (
     <div className="max-w-5xl mx-auto">
-      <div className="prose prose-neutral dark:prose-invert max-w-none mb-16">
-        <h1>Stability &amp; Reliability Model</h1>
-        <p className="text-lg text-muted-foreground leading-relaxed">
+      <div className="prose prose-invert max-w-none mb-16 prose-headings:text-foreground prose-headings:font-bold prose-p:text-foreground/85 prose-a:text-foreground prose-strong:text-foreground prose-li:text-foreground/85 prose-code:text-foreground prose-td:text-foreground/85 prose-th:text-foreground prose-blockquote:text-foreground/75 prose-hr:border-foreground/20">
+        <h1 className="font-display">Stability &amp; Reliability Model</h1>
+        <p className="text-lg text-foreground/70 leading-relaxed">
           Forged Codes and Grip are engineered for maximum availability and resilience. We measure our success not just in features shipped, but in uninterrupted service during your most critical moments.
         </p>
       </div>
@@ -206,26 +206,26 @@ export default function StabilityContent() {
       <div className="mb-16">
         <h2 className="text-3xl font-bold tracking-tight text-foreground mb-8">Performance SLAs</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="rounded-xl border border-border bg-card/50 p-5">
+          <div className="rounded-xl border border-foreground/15 bg-foreground/5 p-5">
             <div className="text-2xl font-bold text-foreground">p95: &lt; 100ms</div>
-            <div className="text-sm text-muted-foreground mt-1">API Response Time</div>
+            <div className="text-sm text-foreground/70 mt-1">API Response Time</div>
           </div>
-          <div className="rounded-xl border border-border bg-card/50 p-5">
+          <div className="rounded-xl border border-foreground/15 bg-foreground/5 p-5">
             <div className="text-2xl font-bold text-foreground">p99: &lt; 500ms</div>
-            <div className="text-sm text-muted-foreground mt-1">API Response Time</div>
+            <div className="text-sm text-foreground/70 mt-1">API Response Time</div>
           </div>
-          <div className="rounded-xl border border-border bg-card/50 p-5">
+          <div className="rounded-xl border border-foreground/15 bg-foreground/5 p-5">
             <div className="text-2xl font-bold text-foreground">&lt; 0.1%</div>
-            <div className="text-sm text-muted-foreground mt-1">Error Rate Target</div>
+            <div className="text-sm text-foreground/70 mt-1">Error Rate Target</div>
           </div>
-          <div className="rounded-xl border border-border bg-card/50 p-5">
+          <div className="rounded-xl border border-foreground/15 bg-foreground/5 p-5">
             <div className="text-2xl font-bold text-foreground">95%</div>
-            <div className="text-sm text-muted-foreground mt-1">Deploy Success Rate</div>
+            <div className="text-sm text-foreground/70 mt-1">Deploy Success Rate</div>
           </div>
         </div>
       </div>
 
-      <div className="prose prose-neutral dark:prose-invert max-w-none mb-16">
+      <div className="prose prose-invert max-w-none mb-16 prose-headings:text-foreground prose-headings:font-bold prose-p:text-foreground/85 prose-a:text-foreground prose-strong:text-foreground prose-li:text-foreground/85 prose-code:text-foreground prose-td:text-foreground/85 prose-th:text-foreground prose-blockquote:text-foreground/75 prose-hr:border-foreground/20">
         <h2 className="text-3xl font-bold tracking-tight text-foreground">Testing Philosophy</h2>
         <SecurityFeature
           title="Resilience Testing"
@@ -240,15 +240,15 @@ export default function StabilityContent() {
         </SecurityFeature>
 
         <h2 className="text-3xl font-bold tracking-tight text-foreground">Our Reliability Commitment</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           We guarantee measurable, auditable reliability. Not just &ldquo;high availability&rdquo;&mdash;but <strong className="text-foreground">proven</strong> availability with transparent metrics, accountable SLAs, and engineering practices that prioritize resilience over features when necessary.
         </p>
 
-        <blockquote className="border-l-4 border-primary/50 pl-4 italic my-6 mx-0 bg-muted/50 py-2 pr-4 rounded-r-md text-muted-foreground">
+        <blockquote className="border-l-4 border-foreground/30 pl-4 italic my-6 mx-0 bg-foreground/5 py-2 pr-4 rounded-r-md text-foreground/70">
           &ldquo;It&apos;s not enough to build systems that work. We build systems that work <strong className="text-foreground">when everything else fails</strong>.&rdquo; &mdash; Forged Codes Engineering Manifesto
         </blockquote>
 
-        <div className="text-sm text-muted-foreground mt-8 pt-6 border-t border-border">
+        <div className="text-sm text-foreground/70 mt-8 pt-6 border-t border-foreground/15">
           <p><strong>Current Reliability Score:</strong> 99.97% (12-month rolling average)</p>
           <p><strong>Last Major Outage:</strong> March 2024 (14 minutes) &mdash; <a href="https://status.forged.codes/postmortems/2024-03">Post-mortem</a></p>
           <p><strong>Next Game Day:</strong> August 2025</p>

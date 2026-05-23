@@ -6,9 +6,9 @@ import { StatCard, ComplianceBadge, SecurityFeature, ThreatModel, ArchitectureLa
 export default function SecurityContent() {
   return (
     <div className="max-w-5xl mx-auto">
-      <div className="prose prose-neutral dark:prose-invert max-w-none mb-16">
-        <h1>Security &amp; Stability Model</h1>
-        <p className="text-lg text-muted-foreground leading-relaxed">
+      <div className="prose prose-invert max-w-none mb-16 prose-headings:text-foreground prose-headings:font-bold prose-p:text-foreground/85 prose-a:text-foreground prose-strong:text-foreground prose-li:text-foreground/85 prose-code:text-foreground prose-td:text-foreground/85 prose-th:text-foreground prose-blockquote:text-foreground/75 prose-hr:border-foreground/20">
+        <h1 className="font-display">Security &amp; Stability Model</h1>
+        <p className="text-lg text-foreground/70 leading-relaxed">
           At Forged Codes, we believe that trust is built through transparency, rigor, and unwavering commitment to protecting what matters most. Our security and stability model encompasses everything from infrastructure hardening to cryptographic guarantees.
         </p>
       </div>
@@ -270,7 +270,7 @@ export default function SecurityContent() {
         </div>
       </div>
 
-      <div className="prose prose-neutral dark:prose-invert max-w-none mb-16">
+      <div className="prose prose-invert max-w-none mb-16 prose-headings:text-foreground prose-headings:font-bold prose-p:text-foreground/85 prose-a:text-foreground prose-strong:text-foreground prose-li:text-foreground/85 prose-code:text-foreground prose-td:text-foreground/85 prose-th:text-foreground prose-blockquote:text-foreground/75 prose-hr:border-foreground/20">
         <h2 className="text-3xl font-bold tracking-tight text-foreground">Security by Design</h2>
         <ul>
           <li><strong>Privacy by Default:</strong> No telemetry, no tracking, no data mining</li>
@@ -281,15 +281,15 @@ export default function SecurityContent() {
         </ul>
 
         <h2 className="text-3xl font-bold tracking-tight text-foreground">Our Commitment</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           We maintain a <strong className="text-foreground">Security First</strong> posture across Forged Codes and Grip. Security isn&apos;t a feature—it&apos;s the foundation upon which everything else is built. We invest 20% of engineering capacity in security improvements, debt reduction, and resilience engineering.
         </p>
 
-        <blockquote className="border-l-4 border-primary/50 pl-4 italic my-6 mx-0 bg-muted/50 py-2 pr-4 rounded-r-md text-muted-foreground">
+        <blockquote className="border-l-4 border-foreground/30 pl-4 italic my-6 mx-0 bg-foreground/5 py-2 pr-4 rounded-r-md text-foreground/70">
           &ldquo;Security is not a product, but a process.&rdquo; &mdash; Bruce Schneier
         </blockquote>
 
-        <div className="text-sm text-muted-foreground mt-8 pt-6 border-t border-border">
+        <div className="text-sm text-foreground/70 mt-8 pt-6 border-t border-foreground/15">
           <p><strong>Last Updated:</strong> May 2025</p>
           <p><strong>Next Review:</strong> August 2025</p>
           <p><strong>Questions?:</strong> security@forged.codes</p>

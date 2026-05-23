@@ -2,6 +2,8 @@ import { ClerkProvider } from "@clerk/nextjs"
 import { Instrument_Sans, Instrument_Serif, JetBrains_Mono } from "next/font/google"
 import { cn } from "@/lib/utils"
 import type { Metadata, Viewport } from "next"
+import { Navigation } from "@/components/landing/navigation"
+import { FooterSection } from "@/components/landing/footer-section"
 
 import "./globals.css"
 
@@ -76,7 +78,9 @@ export default function RootLayout({
     >
       <body>
         <ClerkProvider>
-          {children}
+          <Navigation />
+          <div className="pt-16">{children}</div>
+          <FooterSection />
         </ClerkProvider>
       </body>
     </html>

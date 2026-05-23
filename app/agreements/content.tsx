@@ -5,26 +5,26 @@ import React from "react"
 export default function AgreementsContent() {
   return (
     <div className="max-w-5xl mx-auto">
-      <div className="prose prose-neutral dark:prose-invert max-w-none mb-16">
-        <h1>Agreements</h1>
-        <p className="text-lg text-muted-foreground leading-relaxed">
+      <div className="prose prose-invert max-w-none mb-16 prose-headings:text-foreground prose-headings:font-bold prose-p:text-foreground/85 prose-a:text-foreground prose-strong:text-foreground prose-li:text-foreground/85 prose-code:text-foreground prose-td:text-foreground/85 prose-th:text-foreground prose-blockquote:text-foreground/75 prose-hr:border-foreground/20">
+        <h1 className="font-display">Agreements</h1>
+        <p className="text-lg text-foreground/70 leading-relaxed">
           The following agreements govern your use of Forged Codes services, including the Forged Codes Registry. By using our services, you agree to the applicable agreements listed below.
         </p>
       </div>
 
-      <div className="prose prose-neutral dark:prose-invert max-w-none mb-16">
+      <div className="prose prose-invert max-w-none mb-16 prose-headings:text-foreground prose-headings:font-bold prose-p:text-foreground/85 prose-a:text-foreground prose-strong:text-foreground prose-li:text-foreground/85 prose-code:text-foreground prose-td:text-foreground/85 prose-th:text-foreground prose-blockquote:text-foreground/75 prose-hr:border-foreground/20">
         <h2 className="text-2xl font-bold tracking-tight text-foreground">1. Terms of Service</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           Our <a href="/terms">Terms of Service</a> govern your use of the Forged Codes platform, including account registration, acceptable use policies, and service availability commitments. This is the primary agreement between you and AWFixer Enterprising Inc, OSS Division.
         </p>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">2. Privacy Policy</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           Our <a href="/privacy">Privacy Policy</a> describes how we collect, use, and protect your personal data when you use our services. This includes information about data retention, deletion rights, and international data transfers.
         </p>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">3. Data Processing Agreement (DPA)</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           For customers subject to GDPR or other data protection regulations, we offer a Data Processing Agreement that covers:
         </p>
         <ul>
@@ -34,12 +34,12 @@ export default function AgreementsContent() {
           <li>Data breach notification procedures (72-hour window)</li>
           <li>Data transfer safeguards (SCCs, adequacy decisions)</li>
         </ul>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           To request a signed DPA, contact legal@forged.codes.
         </p>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">4. Service Level Agreement (SLA)</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           Our Service Level Agreement covers availability and performance commitments:
         </p>
         <ul>
@@ -50,7 +50,7 @@ export default function AgreementsContent() {
         </ul>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">5. Contributor License Agreement (CLA)</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           For open-source contributions to Forged Codes projects, we require agreement to our CLA, which:
         </p>
         <ul>
@@ -61,7 +61,7 @@ export default function AgreementsContent() {
         </ul>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">6. Acceptable Use Policy</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           All users must adhere to our Acceptable Use Policy, which prohibits:
         </p>
         <ul>
@@ -74,7 +74,7 @@ export default function AgreementsContent() {
         </ul>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">7. Security Agreement</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           Our security commitments are detailed on our <a href="/security">Security page</a> and include:
         </p>
         <ul>
@@ -86,7 +86,7 @@ export default function AgreementsContent() {
         </ul>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">8. Revisions &amp; Notifications</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           Agreements may be updated from time to time. Material changes will be communicated via email and a notice on our website at least 30 days before taking effect. Continued use of the service after changes become effective constitutes acceptance.
         </p>
 
@@ -99,7 +99,7 @@ export default function AgreementsContent() {
         </ul>
       </div>
 
-      <div className="text-sm text-muted-foreground pt-6 border-t border-border">
+      <div className="text-sm text-foreground/70 pt-6 border-t border-foreground/15">
         <p><strong>Last Updated:</strong> May 2025</p>
         <p><strong>Effective Date:</strong> May 2025</p>
       </div>

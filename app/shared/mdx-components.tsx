@@ -10,11 +10,11 @@ interface StatCardProps {
 
 export function StatCard({ label, value, trend }: StatCardProps) {
   return (
-    <div className="rounded-xl border border-border bg-card p-6 text-center">
+    <div className="rounded-xl border border-foreground/15 bg-foreground/[0.03] p-6 text-center">
       <div className="text-3xl font-bold text-foreground mb-2">{value}</div>
-      <div className="text-sm text-muted-foreground">{label}</div>
+      <div className="text-sm text-foreground/65">{label}</div>
       {trend && (
-        <div className={`text-xs mt-2 ${trend === "up" ? "text-green-500" : "text-red-500"}`}>
+        <div className={`text-xs mt-2 ${trend === "up" ? "text-green-400" : "text-red-400"}`}>
           {trend === "up" ? "\u2191" : "\u2193"} Industry average
         </div>
       )}
@@ -35,7 +35,7 @@ export function SecurityFeature({ title, icon, status = "implemented", children 
   const statusColors = {
     implemented: "bg-green-500/20 text-green-400",
     "in-progress": "bg-blue-500/20 text-blue-400",
-    planned: "bg-muted text-muted-foreground",
+    planned: "bg-foreground/10 text-foreground/50",
   };
 
   const statusLabels = {
@@ -45,9 +45,9 @@ export function SecurityFeature({ title, icon, status = "implemented", children 
   };
 
   return (
-    <div className="rounded-xl border border-border bg-card p-6 hover:shadow-lg transition-shadow">
+    <div className="rounded-xl border border-foreground/15 bg-foreground/[0.03] p-6 hover:border-foreground/25 transition-colors">
       <div className="flex items-start gap-4">
-        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-foreground/10 flex items-center justify-center text-foreground/80">
           {icon}
         </div>
         <div className="flex-1">
@@ -57,7 +57,7 @@ export function SecurityFeature({ title, icon, status = "implemented", children 
               {statusLabels[status]}
             </span>
           </div>
-          {children && <div className="text-sm text-muted-foreground">{children}</div>}
+          {children && <div className="text-sm text-foreground/70">{children}</div>}
         </div>
       </div>
     </div>
@@ -74,21 +74,21 @@ interface ComplianceBadgeProps {
 
 export function ComplianceBadge({ standard, description, certified = true }: ComplianceBadgeProps) {
   return (
-    <div className="flex items-center gap-3 rounded-lg border border-border bg-card/50 p-4">
-      <div className={`w-8 h-8 rounded-full flex items-center justify-center ${certified ? "bg-green-500/20" : "bg-muted"}`}>
+    <div className="flex items-center gap-3 rounded-lg border border-foreground/15 bg-foreground/[0.03] p-4">
+      <div className={`w-8 h-8 rounded-full flex items-center justify-center ${certified ? "bg-green-500/20" : "bg-foreground/10"}`}>
         {certified ? (
-          <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         ) : (
-          <svg className="w-5 h-5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-foreground/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
           </svg>
         )}
       </div>
       <div>
         <div className="font-semibold text-foreground">{standard}</div>
-        <div className="text-sm text-muted-foreground">{description}</div>
+        <div className="text-sm text-foreground/65">{description}</div>
       </div>
     </div>
   );
@@ -117,7 +117,7 @@ export function ThreatModel({ threat, likelihood, impact, mitigation }: ThreatMo
   };
 
   return (
-    <div className={`rounded-lg border p-4 ${impactColors[impact]} bg-card/50`}>
+    <div className={`rounded-lg border p-4 ${impactColors[impact]} bg-foreground/[0.03]`}>
       <div className="flex items-start justify-between gap-4 mb-3">
         <h4 className="font-semibold text-foreground">{threat}</h4>
         <div className="flex gap-2">
@@ -129,8 +129,8 @@ export function ThreatModel({ threat, likelihood, impact, mitigation }: ThreatMo
           </span>
         </div>
       </div>
-      <div className="text-sm text-muted-foreground">
-        <strong className="text-foreground">Mitigation:</strong> {mitigation}
+      <div className="text-sm text-foreground/70">
+        <strong className="text-foreground/90">Mitigation:</strong> {mitigation}
       </div>
     </div>
   );
@@ -147,17 +147,17 @@ interface ArchitectureLayerProps {
 
 export function ArchitectureLayer({ name, description, technologies, securityControls }: ArchitectureLayerProps) {
   return (
-    <div className="relative pl-8 pb-8 border-l-2 border-primary/20 ml-4">
-      <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-background" />
-      <div className="rounded-lg border border-border bg-card p-5">
+    <div className="relative pl-8 pb-8 border-l-2 border-foreground/20 ml-4">
+      <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-foreground ring-4 ring-background" />
+      <div className="rounded-lg border border-foreground/15 bg-foreground/[0.03] p-5">
         <h4 className="text-lg font-semibold text-foreground">{name}</h4>
-        <p className="text-sm text-muted-foreground mt-1 mb-3">{description}</p>
+        <p className="text-sm text-foreground/65 mt-1 mb-3">{description}</p>
 
         <div className="mb-3">
-          <div className="text-xs font-medium text-muted-foreground mb-1">Technologies</div>
+          <div className="text-xs font-medium text-foreground/55 mb-1">Technologies</div>
           <div className="flex flex-wrap gap-1">
             {technologies.map((tech, idx) => (
-              <span key={idx} className="px-2 py-0.5 text-xs rounded bg-muted text-muted-foreground">
+              <span key={idx} className="px-2 py-0.5 text-xs rounded bg-foreground/10 text-foreground/70">
                 {tech}
               </span>
             ))}
@@ -165,11 +165,11 @@ export function ArchitectureLayer({ name, description, technologies, securityCon
         </div>
 
         <div>
-          <div className="text-xs font-medium text-muted-foreground mb-1">Security Controls</div>
+          <div className="text-xs font-medium text-foreground/55 mb-1">Security Controls</div>
           <ul className="text-sm space-y-1">
             {securityControls.map((control, idx) => (
-              <li key={idx} className="flex items-center gap-2 text-muted-foreground">
-                <svg className="w-3 h-3 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <li key={idx} className="flex items-center gap-2 text-foreground/70">
+                <svg className="w-3 h-3 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
                 {control}

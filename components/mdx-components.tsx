@@ -11,19 +11,19 @@ interface MdxComponentsProps {
 
 export function MdxComponents({ children }: MdxComponentsProps) {
   return (
-    <div className="prose prose-neutral dark:prose-invert prose-headings:scroll-mt-20 prose-headings:font-bold lg:prose-lg max-w-none">
+    <div className="prose prose-invert max-w-none prose-headings:text-foreground prose-headings:font-bold prose-p:text-foreground/85 prose-a:text-foreground prose-strong:text-foreground prose-li:text-foreground/85 prose-code:text-foreground prose-td:text-foreground/85 prose-th:text-foreground prose-blockquote:text-foreground/75 prose-hr:border-foreground/20">
       {children}
     </div>
   );
 }
 
-// Custom MDX components for enhanced styling
+// Custom MDX components for enhanced styling — dark-first, high contrast
 export const mdxComponents = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
-        "scroll-mt-20 text-4xl font-bold tracking-tight text-foreground",
-        "border-b border-border pb-2 mb-4",
+        "scroll-mt-20 text-4xl font-display tracking-tight text-foreground",
+        "border-b border-foreground/15 pb-3 mb-6",
         className
       )}
       {...props}
@@ -32,8 +32,8 @@ export const mdxComponents = {
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        "scroll-mt-16 text-3xl font-bold tracking-tight text-foreground",
-        "border-b border-border pb-2 mb-4 mt-8",
+        "scroll-mt-16 text-3xl font-display tracking-tight text-foreground",
+        "border-b border-foreground/15 pb-3 mb-4 mt-10",
         className
       )}
       {...props}
@@ -42,8 +42,8 @@ export const mdxComponents = {
   h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3
       className={cn(
-        "scroll-mt-12 text-2xl font-bold tracking-tight text-foreground",
-        "mt-6 mb-3",
+        "scroll-mt-12 text-2xl font-display tracking-tight text-foreground",
+        "mt-8 mb-3",
         className
       )}
       {...props}
@@ -62,7 +62,7 @@ export const mdxComponents = {
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p
       className={cn(
-        "leading-7 text-muted-foreground mb-4",
+        "leading-7 text-foreground/85 mb-4",
         className
       )}
       {...props}
@@ -71,13 +71,13 @@ export const mdxComponents = {
   a: ({ className, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
     const isExternal = props.href?.startsWith("http");
     const Component = isExternal ? "a" : Link;
-    
+
     return (
       <Component
         href={props.href || ""}
         className={cn(
-          "font-medium text-primary underline decoration-primary/30 underline-offset-4",
-          "transition-colors hover:text-primary/80",
+          "font-medium text-foreground underline decoration-foreground/30 underline-offset-4",
+          "transition-colors hover:text-foreground/70",
           "inline-flex items-center gap-1",
           className
         )}
@@ -93,9 +93,9 @@ export const mdxComponents = {
   blockquote: ({ className, ...props }: React.HTMLAttributes<HTMLQuoteElement>) => (
     <blockquote
       className={cn(
-        "border-l-4 border-primary/50 pl-4 italic",
-        "my-6 mx-0 bg-muted/50 py-2 pr-4 rounded-r-md",
-        "text-muted-foreground",
+        "border-l-4 border-foreground/40 pl-4 italic",
+        "my-6 mx-0 bg-foreground/5 py-3 pr-4 rounded-r-md",
+        "text-foreground/75",
         className
       )}
       {...props}
@@ -104,11 +104,8 @@ export const mdxComponents = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        "relative rounded bg-muted px-[0.3rem] py-[0.2rem]",
-        "font-mono text-sm font-semibold",
-        "text-primary",
-        "before:absolute before:inset-0 before:-z-10 before:bg-primary/10",
-        "before:rounded before:blur-[2px]",
+        "relative rounded bg-foreground/10 px-[0.3rem] py-[0.2rem]",
+        "font-mono text-sm font-semibold text-foreground/90",
         className
       )}
       {...props}
@@ -117,7 +114,7 @@ export const mdxComponents = {
   pre: ({ className, ...props }: React.HTMLAttributes<HTMLPreElement>) => (
     <pre
       className={cn(
-        "relative overflow-x-auto rounded-lg border bg-foreground",
+        "relative overflow-x-auto rounded-lg border border-foreground/15 bg-foreground text-background",
         "p-4 my-6",
         className
       )}
@@ -139,9 +136,9 @@ export const mdxComponents = {
   th: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
     <th
       className={cn(
-        "border border-border px-4 py-3 text-left",
+        "border border-foreground/15 px-4 py-3 text-left",
         "font-bold text-foreground",
-        "bg-muted/50",
+        "bg-foreground/5",
         className
       )}
       {...props}
@@ -150,8 +147,8 @@ export const mdxComponents = {
   td: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
     <td
       className={cn(
-        "border border-border px-4 py-3 text-foreground",
-        "[tbody>tr:nth-child(odd)_&]:bg-muted/30",
+        "border border-foreground/15 px-4 py-3 text-foreground/85",
+        "[tbody>tr:nth-child(odd)_&]:bg-foreground/[0.03]",
         className
       )}
       {...props}
@@ -160,7 +157,7 @@ export const mdxComponents = {
   ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
     <ul
       className={cn(
-        "my-4 ml-6 list-disc [&>li]:mt-2",
+        "my-4 ml-6 list-disc marker:text-foreground/50 [&>li]:mt-2",
         className
       )}
       {...props}
@@ -169,18 +166,18 @@ export const mdxComponents = {
   ol: ({ className, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
     <ol
       className={cn(
-        "my-4 ml-6 list-decimal [&>li]:mt-2",
+        "my-4 ml-6 list-decimal marker:text-foreground/50 [&>li]:mt-2",
         className
       )}
       {...props}
     />
   ),
   li: ({ className, ...props }: React.HTMLAttributes<HTMLLIElement>) => (
-    <li className={cn("leading-relaxed", className)} {...props} />
+    <li className={cn("leading-relaxed text-foreground/85", className)} {...props} />
   ),
   hr: ({ ...props }) => (
     <hr
-      className="my-8 border-border"
+      className="my-8 border-foreground/15"
       {...props}
     />
   ),

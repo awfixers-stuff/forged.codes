@@ -2,8 +2,8 @@ import MDXContent from "./content";
 
 export default function StabilityPage() {
   return (
-    <main className="min-h-screen bg-background">
-      <article className="container mx-auto px-4 py-12 max-w-5xl">
+    <main className="min-h-screen">
+      <article className="container mx-auto px-4 pt-8 pb-12 max-w-5xl">
         <MDXContent />
       </article>
     </main>

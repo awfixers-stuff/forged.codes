@@ -5,16 +5,16 @@ import React from "react"
 export default function PrivacyContent() {
   return (
     <div className="max-w-5xl mx-auto">
-      <div className="prose prose-neutral dark:prose-invert max-w-none mb-16">
-        <h1>Privacy Policy</h1>
-        <p className="text-lg text-muted-foreground leading-relaxed">
+      <div className="prose prose-invert max-w-none mb-16 prose-headings:text-foreground prose-headings:font-bold prose-p:text-foreground/85 prose-a:text-foreground prose-strong:text-foreground prose-li:text-foreground/85 prose-code:text-foreground prose-td:text-foreground/85 prose-th:text-foreground prose-blockquote:text-foreground/75 prose-hr:border-foreground/20">
+        <h1 className="font-display">Privacy Policy</h1>
+        <p className="text-lg text-foreground/70 leading-relaxed">
           At AWFixer Enterprising Inc, OSS Division (&quot;Forged Codes&quot;, &quot;we&quot;, &quot;us&quot;, &quot;our&quot;), we take your privacy seriously. This policy explains what data we collect, how we use it, and the choices you have.
         </p>
       </div>
 
-      <div className="prose prose-neutral dark:prose-invert max-w-none mb-16">
+      <div className="prose prose-invert max-w-none mb-16 prose-headings:text-foreground prose-headings:font-bold prose-p:text-foreground/85 prose-a:text-foreground prose-strong:text-foreground prose-li:text-foreground/85 prose-code:text-foreground prose-td:text-foreground/85 prose-th:text-foreground prose-blockquote:text-foreground/75 prose-hr:border-foreground/20">
         <h2 className="text-2xl font-bold tracking-tight text-foreground">1. Information We Collect</h2>
-        <h3>Information You Provide</h3>
+        <h3 className="text-foreground/90">Information You Provide</h3>
         <ul>
           <li><strong>Account information:</strong> name, email address, and password when you create an account.</li>
           <li><strong>Profile information:</strong> display name, avatar, and organization details you choose to provide.</li>
@@ -22,7 +22,7 @@ export default function PrivacyContent() {
           <li><strong>Payment information:</strong> billing details processed through our secure payment provider; we never store full credit card numbers on our servers.</li>
         </ul>
 
-        <h3>Information Collected Automatically</h3>
+        <h3 className="text-foreground/90">Information Collected Automatically</h3>
         <ul>
           <li><strong>Usage data:</strong> pages visited, features used, and interaction patterns within our platform.</li>
           <li><strong>Device data:</strong> browser type, operating system, IP address, and general geographic region (country-level only).</li>
@@ -39,7 +39,7 @@ export default function PrivacyContent() {
         </ul>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">3. Data Retention &amp; Deletion</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           We retain your personal data only as long as necessary for the purposes outlined in this policy. Upon account deletion:
         </p>
         <ul>
@@ -48,12 +48,12 @@ export default function PrivacyContent() {
           <li>Anonymized usage statistics may be retained for analytics</li>
           <li>Backup copies are purged within 90 days</li>
         </ul>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           You may request full data export or deletion at any time by contacting privacy@forged.codes.
         </p>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">4. Data Sharing</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           We do not sell your personal data. We share data only with:
         </p>
         <ul>
@@ -63,7 +63,7 @@ export default function PrivacyContent() {
         </ul>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">5. Security</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           We implement industry-standard security measures including:
         </p>
         <ul>
@@ -73,12 +73,12 @@ export default function PrivacyContent() {
           <li>Regular third-party security audits (SOC 2 Type II, ISO 27001)</li>
           <li>Bug bounty program for responsible vulnerability disclosure</li>
         </ul>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           For our complete security posture, see our <a href="/security">Security page</a>.
         </p>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">6. Your Rights</h2>
-        <p className="text-muted-foreground">Depending on your jurisdiction, you may have the right to:</p>
+        <p className="text-foreground/70">Depending on your jurisdiction, you may have the right to:</p>
         <ul>
           <li>Access the personal data we hold about you</li>
           <li>Correct inaccurate data</li>
@@ -87,32 +87,32 @@ export default function PrivacyContent() {
           <li>Data portability (receive your data in a machine-readable format)</li>
           <li>Withdraw consent where processing is based on consent</li>
         </ul>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           Exercise any of these rights by contacting privacy@forged.codes. We respond to all requests within 30 days.
         </p>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">7. Cookies &amp; Tracking</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           We use minimal, essential cookies for authentication and security (CSRF protection, session management). We do not use advertising trackers or sell browsing data. Analytics are collected in aggregated, anonymized form only.
         </p>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">8. International Data Transfers</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           Customer data is stored in region-specific data centers (US-East, EU-West, APAC). Data is never transferred across regions without explicit consent. We maintain Standard Contractual Clauses (SCCs) for any necessary cross-border transfers and comply with GDPR, CCPA, and other applicable data protection frameworks.
         </p>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">9. Children&#39;s Privacy</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           Forged Codes is not directed to children under 16. We do not knowingly collect personal data from children. If we discover we have collected data from a child under 16, we will delete it promptly.
         </p>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">10. Changes to This Policy</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           We may update this Privacy Policy from time to time. We will notify registered users via email for material changes and update the &quot;Last Updated&quot; date below. Continued use of our services after changes constitutes acceptance of the updated policy.
         </p>
 
         <h2 className="text-2xl font-bold tracking-tight text-foreground">11. Contact</h2>
-        <p className="text-muted-foreground">
+        <p className="text-foreground/70">
           For privacy-related questions, requests, or concerns:
         </p>
         <ul>
@@ -122,7 +122,7 @@ export default function PrivacyContent() {
         </ul>
       </div>
 
-      <div className="text-sm text-muted-foreground pt-6 border-t border-border">
+      <div className="text-sm text-foreground/70 pt-6 border-t border-foreground/15">
         <p><strong>Last Updated:</strong> May 2025</p>
         <p><strong>Effective Date:</strong> May 2025</p>
       </div>
