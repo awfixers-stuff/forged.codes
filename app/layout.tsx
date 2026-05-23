@@ -1,15 +1,61 @@
 import { ClerkProvider } from "@clerk/nextjs"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Instrument_Sans, Instrument_Serif, JetBrains_Mono } from "next/font/google"
+import { cn } from "@/lib/utils"
+import type { Metadata, Viewport } from "next"
 
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils"
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#1a1a1a",
+}
 
-const fontMono = Geist_Mono({
+export const metadata: Metadata = {
+  title: "Forged Codes — Infrastructure for Software Supply Chains",
+  description: "Grip provides the backend — hosting, version control, CI/CD, registry, security — and you build the experience.",
+  keywords: ["version control", "infrastructure", "supply chain", "CI/CD", "registry", "deployment"],
+  authors: [{ name: "AWFixer Enterprising Inc" }],
+  creator: "Forged Codes",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://forged.codes",
+    title: "Forged Codes — Infrastructure for Software Supply Chains",
+    description: "Grip provides the backend — hosting, version control, CI/CD, registry, security — and you build the experience.",
+    siteName: "Forged Codes",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Forged Codes — Infrastructure for Software Supply Chains",
+    description: "Grip provides the backend — hosting, version control, CI/CD, registry, security — and you build the experience.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
+
+const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-instrument",
+  display: "swap",
+  preload: true,
+})
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-instrument-serif",
+  display: "swap",
+  preload: true,
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+  display: "swap",
+  preload: true,
 })
 
 export default function RootLayout({
@@ -20,17 +66,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      suppressHydrationWarning
       className={cn(
         "antialiased",
-        fontMono.variable,
-        "font-sans",
-        geist.variable
+        instrumentSans.variable,
+        instrumentSerif.variable,
+        jetbrainsMono.variable,
+        "font-sans"
       )}
     >
       <body>
         <ClerkProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          {children}
         </ClerkProvider>
       </body>
     </html>

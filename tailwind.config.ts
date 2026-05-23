@@ -7,6 +7,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Instrument Sans', "system-ui", "sans-serif"],
+        mono: ['JetBrains Mono', "monospace"],
+        display: ['Instrument Serif', "Georgia", "serif"],
+      },
       typography: {
         DEFAULT: {
           css: {
