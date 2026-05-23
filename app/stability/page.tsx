@@ -3,7 +3,7 @@ import MDXContent from "./content";
 export default function StabilityPage() {
   return (
     <main className="min-h-screen">
-      <article className="container mx-auto px-4 pt-8 pb-12 max-w-5xl">
+      <article className="container mx-auto px-4 pt-32 pb-12 max-w-5xl">
         <MDXContent />
       </article>
     </main>

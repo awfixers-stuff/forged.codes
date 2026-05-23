@@ -30,7 +30,7 @@ export default async function RoadmapPage() {
 
   return (
     <main className="min-h-screen">
-      <article className="container mx-auto px-4 pt-8 pb-12 max-w-5xl">
+      <article className="container mx-auto px-4 pt-32 pb-12 max-w-5xl">
         <div className="prose prose-invert max-w-none prose-headings:text-foreground prose-headings:font-bold prose-headings:scroll-mt-20 prose-p:text-foreground/85 prose-a:text-foreground prose-strong:text-foreground prose-li:text-foreground/85 prose-code:text-foreground prose-td:text-foreground/85 prose-th:text-foreground prose-blockquote:text-foreground/75 prose-hr:border-foreground/20">
           <MDXRemote
             source={content}

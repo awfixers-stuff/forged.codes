@@ -6,7 +6,7 @@ import { StatCard, ArchitectureLayer, SecurityFeature, ThreatModel, ComplianceBa
 export default function StabilityContent() {
   return (
     <div className="max-w-5xl mx-auto">
-      <div className="prose prose-invert max-w-none mb-16 prose-headings:text-foreground prose-headings:font-bold prose-p:text-foreground/85 prose-a:text-foreground prose-strong:text-foreground prose-li:text-foreground/85 prose-code:text-foreground prose-td:text-foreground/85 prose-th:text-foreground prose-blockquote:text-foreground/75 prose-hr:border-foreground/20">
+      <div className="prose prose-invert max-w-none mb-28 prose-headings:text-foreground prose-headings:font-bold prose-p:text-foreground/85 prose-a:text-foreground prose-strong:text-foreground prose-li:text-foreground/85 prose-code:text-foreground prose-td:text-foreground/85 prose-th:text-foreground prose-blockquote:text-foreground/75 prose-hr:border-foreground/20">
         <h1 className="font-display">Stability &amp; Reliability Model</h1>
         <p className="text-lg text-foreground/70 leading-relaxed">
           Forged Codes and Grip are engineered for maximum availability and resilience. We measure our success not just in features shipped, but in uninterrupted service during your most critical moments.

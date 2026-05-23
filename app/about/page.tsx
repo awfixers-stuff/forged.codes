@@ -30,8 +30,8 @@ export default async function AboutIndexPage() {
 
   return (
     <main className="min-h-screen">
-      <article className="container mx-auto px-4 pt-8 pb-12 max-w-4xl">
-        <header className="mb-12">
+      <article className="container mx-auto px-4 pt-32 pb-12 max-w-4xl">
+        <header className="mb-24">
           <h1 className="text-4xl font-display tracking-tight text-foreground sm:text-5xl">
             About
           </h1>

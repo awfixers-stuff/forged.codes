@@ -6,7 +6,7 @@ import { StatCard, ComplianceBadge, SecurityFeature, ThreatModel, ArchitectureLa
 export default function SecurityContent() {
   return (
     <div className="max-w-5xl mx-auto">
-      <div className="prose prose-invert max-w-none mb-16 prose-headings:text-foreground prose-headings:font-bold prose-p:text-foreground/85 prose-a:text-foreground prose-strong:text-foreground prose-li:text-foreground/85 prose-code:text-foreground prose-td:text-foreground/85 prose-th:text-foreground prose-blockquote:text-foreground/75 prose-hr:border-foreground/20">
+      <div className="prose prose-invert max-w-none mb-28 prose-headings:text-foreground prose-headings:font-bold prose-p:text-foreground/85 prose-a:text-foreground prose-strong:text-foreground prose-li:text-foreground/85 prose-code:text-foreground prose-td:text-foreground/85 prose-th:text-foreground prose-blockquote:text-foreground/75 prose-hr:border-foreground/20">
         <h1 className="font-display">Security &amp; Stability Model</h1>
         <p className="text-lg text-foreground/70 leading-relaxed">
           At Forged Codes, we believe that trust is built through transparency, rigor, and unwavering commitment to protecting what matters most. Our security and stability model encompasses everything from infrastructure hardening to cryptographic guarantees.

@@ -59,8 +59,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
 
   return (
     <main className="min-h-screen">
-      <article className="container mx-auto px-4 pt-8 pb-12 max-w-4xl">
-        <header className="mb-12">
+      <article className="container mx-auto px-4 pt-32 pb-12 max-w-4xl">
+        <header className="mb-24">
           <div className="flex items-center gap-2 text-sm text-foreground/60 mb-4">
             <a href="/about" className="hover:text-foreground transition-colors">
               About
