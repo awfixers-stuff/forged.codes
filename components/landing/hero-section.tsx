@@ -36,7 +36,7 @@ export function HeroSection() {
   }, [prevWordIndex]);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col overflow-hidden">
       {/* Subtle grid lines */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
         {[...Array(8)].map((_, i) => (
@@ -63,7 +63,7 @@ export function HeroSection() {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 py-32 lg:py-40">
+      <div className="relative z-10 flex-1 flex flex-col justify-center max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Eyebrow */}
         <div
           className={`mb-10 transition-all duration-700 ${
@@ -157,7 +157,7 @@ export function HeroSection() {
 
       {/* Stats marquee */}
       <div
-        className={`absolute bottom-24 left-0 right-0 transition-all duration-700 delay-500 ${
+        className={`relative z-10 overflow-hidden px-6 lg:px-12 pb-8 lg:pb-12 transition-all duration-700 delay-500 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
